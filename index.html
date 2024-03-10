@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Ease </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- style.css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Roboto font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- ----- NavBar ---- -->
+
+
+    <div class="logo">
+        <img src="expense-ease-low-resolution-logo-black-on-transparent-background.png" alt="" height="20px">
+
+        <div class="login">
+            <a class="log" href="login.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; LogOut</a>
+        </div>
+        <div class="clear">
+            <button class="clr" onclick="cle()"> <i class="fa-solid fa-trash"></i> &nbsp; Clear All </button>
+        </div>
+
+
+    </div>
+
+    <!-- ---- Getting month and Year ---- -->
+
+    <div class="main">
+        <div class="month">
+            <h1>Your Income and Expenses in <span id="month"> </span> <span id="year"></span> </h1>
+        </div>
+
+        <div class="balance">
+            <h1>Current Balance &#8377 <span id="balance"> 100 </span></h1>
+        </div>
+
+
+        <!-- ---- Total Income And Expense  ---- -->
+        <div class="container">
+            <div class="income">
+                <h2>Income + &#8377 <span id="plus"> 100 </span></h2>
+            </div>
+
+            <div class="expense">
+                <h2>Expense - &#8377 <span id="minus"> 100 </span></h2>
+
+            </div>
+
+
+            <!-- ---- Add addTransaction ---- -->
+        </div>
+        <div class="bottom mt-3">
+            <div class="add ">
+                <div class="container">
+                    <div class="row text-center ">
+
+                        <div class="col-16 col-sm-6 input-group my-3">
+                            <input type="text" id="text" class="col-10 col-sm-9 col-md-10 form-control"
+                                placeholder="Add description">
+                        </div>
+
+                        <div class="col-12 col-sm-6 input-group my-3">
+                            <input type="number" id="amount" class="form-control "
+                                placeholder=" +/- &nbsp; Enter Amount">
+                            <div class="input-group-append">
+                                <button class="btn add__btn" type="button" onclick="addTransaction()">
+                                    <i class="fas fa-check-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- ---- List Of added Income and Expense--- -->
+
+        <div class="lists row mt-5">
+            <div class="income_list col-8 col-lg-4 my-5 expenses">
+                <h2>INCOME</h2>
+                <ul id="list" class="list"></ul>
+            </div>
+            <div class="expense_list col-8 col-lg-4 my-5 expenses">
+                <h2>EXPENSE</h2>
+                <ul id="list1" class="list1"></ul>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+
+</html>
